@@ -20,9 +20,12 @@ struct LoginView: View {
                     angle: 15,
                     background: .orange
                 )
-                
                 // login form
                 Form {
+                    if !viewModel.errorMessage.isEmpty {
+                        Text(viewModel.errorMessage)
+                            .foregroundColor(.red)
+                    }
                     // text fields
                     TextField("Email Address", text: $viewModel.email)
                         .textFieldStyle(DefaultTextFieldStyle())
@@ -33,7 +36,7 @@ struct LoginView: View {
                     
                     // submit button
                     GDButton(title: "Log in", background: .green) {
-                        // attempt login
+                        viewModel.login()
                     }
                 }
                 
