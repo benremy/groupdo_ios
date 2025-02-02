@@ -10,7 +10,7 @@ import SwiftUI
 struct groupDoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
