@@ -11,7 +11,7 @@ struct HeaderView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 0)
-                .foregroundColor(Color.pink)
+                .foregroundColor(Color.orange)
                 .rotationEffect(Angle.degrees(15))
             VStack {
                 Text("groupDo")
