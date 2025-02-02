@@ -16,7 +16,12 @@ struct LoginView: View {
         NavigationView {
             VStack {
                 // header
-                HeaderView()
+                HeaderView(
+                    title: "Group Do",
+                    subtitle: "Do things together",
+                    angle: 15,
+                    background: .orange
+                )
                 
                 // login form
                 Form {

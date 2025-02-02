@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct HeaderView: View {
+    let title: String
+    let subtitle: String
+    let angle: Double
+    let background: Color
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 0)
-                .foregroundColor(Color.orange)
-                .rotationEffect(Angle.degrees(15))
+                .foregroundColor(background)
+                .rotationEffect(Angle.degrees(angle))
             VStack {
-                Text("groupDo")
+                Text(title)
                     .font(.system(size: 50, weight: .bold, design: .monospaced))
+                    .foregroundColor(.white)
+                
+                Text(subtitle)
+                    .font(.system(size: 30, design: .monospaced))
                     .foregroundColor(.white)
             }
             .padding(.top, 50)
@@ -29,5 +38,10 @@ struct HeaderView: View {
 }
 
 #Preview {
-    HeaderView()
+    HeaderView(
+        title: "Title",
+        subtitle: "Subtitle",
+        angle: 0,
+        background: .blue
+    )
 }
