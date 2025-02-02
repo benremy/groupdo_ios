@@ -27,17 +27,8 @@ struct RegisterView: View {
             SecureField("Password", text: $password)
                 .textFieldStyle(DefaultTextFieldStyle())
             
-            Button {
-                // attempt login
-                #warning("Implement register logic here")
-            } label: {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 8)
-                        .fill(.green)
-                    Text("Register")
-                        .foregroundColor(.white)
-                        .bold()
-                }
+            GDButton(title: "Sign Up", background: .green) {
+                // Attempt Signup
             }
         }
         Spacer()

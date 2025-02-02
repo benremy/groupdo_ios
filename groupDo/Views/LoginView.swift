@@ -11,7 +11,6 @@ struct LoginView: View {
     @State var email = ""
     @State var password = ""
     
-    
     var body: some View {
         NavigationView {
             VStack {
@@ -28,21 +27,14 @@ struct LoginView: View {
                     // text fields
                     TextField("Email Address", text: $email)
                         .textFieldStyle(DefaultTextFieldStyle())
+                        .autocapitalization(.none)
+                    
                     SecureField("Password", text: $password)
                         .textFieldStyle(DefaultTextFieldStyle())
                     
                     // submit button
-                    Button {
+                    GDButton(title: "Log in", background: .green) {
                         // attempt login
-                        #warning("Implement login logic here")
-                    } label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 8)
-                                .fill(.blue)
-                            Text("Login")
-                                .foregroundColor(.white)
-                                .bold()
-                        }
                     }
                 }
                 

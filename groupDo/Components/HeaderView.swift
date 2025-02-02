@@ -24,14 +24,14 @@ struct HeaderView: View {
                     .foregroundColor(.white)
                 
                 Text(subtitle)
-                    .font(.system(size: 30, design: .monospaced))
+                    .font(.system(size: 20, design: .monospaced))
                     .foregroundColor(.white)
             }
             .padding(.top, 50)
         }
         .frame(
             width: UIScreen.main.bounds.width * 3,
-            height: 300
+            height: 400
         )
         .offset(x: 0, y: -100)
     }
