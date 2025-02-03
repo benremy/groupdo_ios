@@ -38,9 +38,22 @@
 		462B48DD2D4F92840036DB1A /* groupDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = groupDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		469F53EF2D508CBC008F1896 /* Exceptions for "groupDo" folder in "groupDo" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 462B48C22D4F92830036DB1A /* groupDo */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		462B48C52D4F92830036DB1A /* groupDo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				469F53EF2D508CBC008F1896 /* Exceptions for "groupDo" folder in "groupDo" target */,
+			);
 			path = groupDo;
 			sourceTree = "<group>";
 		};
@@ -277,6 +290,8 @@
 /* Begin XCBuildConfiguration section */
 		462B48E52D4F92840036DB1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 462B48C52D4F92830036DB1A /* groupDo */;
+			baseConfigurationReferenceRelativePath = "Development.xcconfig .xcconfig";
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -405,6 +420,7 @@
 				DEVELOPMENT_TEAM = K469RYA62J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = groupDo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -434,6 +450,7 @@
 				DEVELOPMENT_TEAM = K469RYA62J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = groupDo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

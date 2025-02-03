@@ -14,7 +14,13 @@ class LoginViewModel: ObservableObject {
     
     init() {}
     
-    func login() {}
+    func login() {
+        guard validate() else {
+            return
+        }
+        // Try to login
+        print("Login w/ Supabase")
+    }
     
     private func validate() -> Bool {
         errorMessage = ""

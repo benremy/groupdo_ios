@@ -1,0 +1,13 @@
+//
+//  Development.xcconfig .xcconfig
+//  groupDo
+//
+//  Created by Reuben Remy on 2/3/25.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+SUPABASE_URL = https://yqakxdnotynrouzywkop.supabase.co
+
+SUPABASE_KEY = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlxYWt4ZG5vdHlucm91enl3a29wIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTIxMDk5MDEsImV4cCI6MjAyNzY4NTkwMX0.s3e5w8z-aOlQcVBs-M4im2q8HeaK_NkInFe6a25zbLM
