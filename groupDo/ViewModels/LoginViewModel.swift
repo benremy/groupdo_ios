@@ -14,24 +14,24 @@ class LoginViewModel: ObservableObject {
     
     init() {}
     
-    func login() {
+    func login() {}
+    
+    private func validate() -> Bool {
         errorMessage = ""
         
         guard !email.trimmingCharacters(in: .whitespaces).isEmpty,
               !password.trimmingCharacters(in: .whitespaces).isEmpty else {
             
             errorMessage = "Please fill in all fields."
-            return
+            return false
         }
         
         // email has @ sign
         guard email.contains("@") && email.contains(".") else {
             errorMessage = "Please enter valid email."
-            return
+            return false
         }
         
-        print("called login")
+        return true
     }
-    
-    func validate() {}
 }
