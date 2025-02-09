@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct NewItemView: View {
+    @StateObject var viewModel = NewItemViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("New Item")
+                .font(.system(size: 32))
+                .bold()
+            
+            Form {
+                // Item
+                TextField("Item Name", text: $viewModel.title)
+                
+                // Due Date
+                DatePicker("Due Date", selection: $viewModel.dueDate)
+                    .datePickerStyle(GraphicalDatePickerStyle())
+                
+                // Button
+                GDButton(title: "Save Task", background: .mint) {
+                    viewModel.save()
+                }
+                
+            }
+        }
     }
 }
 

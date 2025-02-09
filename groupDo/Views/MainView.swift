@@ -1,18 +1,9 @@
-//
-//  ContentView.swift
-//  groupDo
-//
-//  Created by Reuben Remy on 2/2/25.
-//
-
 import SwiftUI
 import Supabase
 
-
 struct MainView: View {
     @StateObject var viewModel = MainViewModel()
-    
-    
+
     // Safely unwrap Supabase URL and Key
 //    let supabase_url = Bundle.main.infoDictionary?["SUPABASE_URL"] as? String
 //    let supabase_key = Bundle.main.infoDictionary?["SUPABASE_KEY"] as? String

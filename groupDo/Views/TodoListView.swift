@@ -21,10 +21,20 @@ struct TodoListView: View {
             }
             .navigationTitle("To do List")
             .toolbar {
-                Button {
-                    // Action
-                } label: {
-                    Image(systemName: "plus")
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        // Action
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        // Action
+                    } label: {
+                        Image(systemName: "gearshape")
+                    }
                 }
             }
         }
