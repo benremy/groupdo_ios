@@ -22,6 +22,18 @@ class RegisterViewModel: ObservableObject {
         print("registering user...")
     }
     
+    private func insertUserRecord(id: String) {
+        let newUser = User(
+            id: id,
+            name: name,
+            email: email,
+            joined: Date().timeIntervalSince1970
+        )
+        
+        // insert into db
+        print(newUser.id)
+    }
+    
     private func validate() -> Bool {
         guard !name.trimmingCharacters(in: .whitespaces).isEmpty,
               !email.trimmingCharacters(in: .whitespaces).isEmpty,
