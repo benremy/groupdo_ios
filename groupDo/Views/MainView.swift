@@ -10,6 +10,8 @@ import Supabase
 
 
 struct MainView: View {
+    @StateObject var viewModel = MainViewModel()
+    
     
     // Safely unwrap Supabase URL and Key
 //    let supabase_url = Bundle.main.infoDictionary?["SUPABASE_URL"] as? String
@@ -24,8 +26,23 @@ struct MainView: View {
     //}
     
     
+    private var loggedIn: Bool = true
+    
     var body: some View {
-        LoginView()
+        if loggedIn {
+            TabView {
+                TodoListView()
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                ProfileView()
+                    .tabItem {
+                        Label("Profile", systemImage: "person.circle")
+                    }
+            }
+        } else {
+            LoginView()
+        }
     }
 }
 
