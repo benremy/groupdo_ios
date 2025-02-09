@@ -31,7 +31,7 @@ struct MainView: View {
     var body: some View {
         if loggedIn {
             TabView {
-                TodoListView()
+                TodoListView(userId: viewModel.currentUserId)
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
