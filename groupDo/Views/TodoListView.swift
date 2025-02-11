@@ -24,7 +24,7 @@ struct TodoListView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        // Action
+                        viewModel.showingNewItemView = true
                     } label: {
                         Image(systemName: "plus")
                     }
