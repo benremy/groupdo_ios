@@ -15,6 +15,7 @@ struct NewItemView: View {
             Text("New Item")
                 .font(.system(size: 32))
                 .bold()
+                .padding(.top, 100)
             
             Form {
                 // Item

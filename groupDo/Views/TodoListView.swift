@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TodoListView: View {
+    @StateObject var viewModel = TodoListViewItemModel()
     private var userId: String
     
     init(userId: String) {
@@ -28,7 +29,6 @@ struct TodoListView: View {
                         Image(systemName: "plus")
                     }
                 }
-                
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         // Action
@@ -36,6 +36,9 @@ struct TodoListView: View {
                         Image(systemName: "gearshape")
                     }
                 }
+            }
+            .sheet(isPresented: $viewModel.showingNewItemView) {
+                NewItemView()
             }
         }
     }
