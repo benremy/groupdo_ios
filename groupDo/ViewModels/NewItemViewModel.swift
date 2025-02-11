@@ -15,6 +15,19 @@ class NewItemViewModel: ObservableObject {
     init() {}
     
     func save() {
-        print("task saved")
+        print("\(self.title), \(self.description), \(self.dueDate)")
+    }
+    
+    // computed value
+    var canSave: Bool {
+        guard !title.trimmingCharacters(in: .whitespaces).isEmpty else {
+            return false
+        }
+        
+        guard dueDate >= Date().addingTimeInterval(-86400) else {
+            return false
+        }
+        
+        return true
     }
 }

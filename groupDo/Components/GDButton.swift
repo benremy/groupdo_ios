@@ -19,7 +19,7 @@ struct GDButton: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 8)
                     .fill(background)
-                    .frame(width: UIScreen.main.bounds.width, height: 50)
+                    .frame(height: 50)
                 Text(title)
                     .foregroundColor(.white)
                     .bold()
